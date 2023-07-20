@@ -1,0 +1,10 @@
+.button__text{
+        /* text */
+        color :white;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        text-align: center;
+        backdrop-filter: blur(2px);
+}

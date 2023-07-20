@@ -1,0 +1,13 @@
+.button{
+    width: 326px;
+    height: 63px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    border-top: none;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    background:none;
+
+
+}
