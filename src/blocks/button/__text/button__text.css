@@ -1,7 +1,6 @@
 .button__text{
-        /* text */
+        font-size: 26px;
         color :white;
-        font-size: 36px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;

@@ -1,0 +1,9 @@
+.homepage__image{
+    width: 100%;
+    max-height: 997px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: contrast(1.2) blur(4px);
+    z-index: 0;
+}

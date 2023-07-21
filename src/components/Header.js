@@ -1,21 +1,15 @@
 import React from "react";
 import logo from '../images/Logo pagina.png'
-const Header = () => {
+const Header = (props) => {
   return (
     <>
     <div className="header">
-        <img className="header__logo" src={logo}/>
-        <div >
+        <img className="header__logo" alt="Logo Music and Music" src={logo}/>
+        {props.children}
         <button className="button button__text">
             Home 
         </button>
-        <button className="button button__text">
-            Home 
-        </button>
-        </div>
-        <button className="button button__text">
-            Home 
-        </button>
+        <div className="header__blur"></div>
       </div>
     </>
   );

@@ -1,0 +1,11 @@
+.header__blur{
+    width: auto;
+    height: auto;
+    position: absolute;
+    background:black ;
+    opacity: .5;
+    width: 100%;
+    height: 100%;
+    filter: blur(10px);
+    z-index: 0;
+}

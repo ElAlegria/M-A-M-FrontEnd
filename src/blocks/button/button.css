@@ -1,6 +1,6 @@
 .button{
-    width: 326px;
-    height: 63px;
+    width: 226px;
+    height: 43px;
     flex-shrink: 0;
     border-radius: 50px;
     border-top: none;
@@ -8,6 +8,15 @@
     border-right: 1px solid white;
     border-left: 1px solid white;
     background:none;
+    transition: opacity .5s  ease-in ;
+    transition: filter .3s  linear ;
+    transition: border-top .2s ease-in ;
+    z-index: 3;
+    
+}
 
-
+.button:hover{
+    border-top: 7px solid white;
+    opacity: .6;
+    /* filter: blur(1px); */
 }

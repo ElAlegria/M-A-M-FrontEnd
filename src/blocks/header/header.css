@@ -1,8 +1,14 @@
 .header{
     width: 100%;
     max-height:135px ;
-    background:black ;
+    background:none ;
     display: flex;
     align-items: center;
-    gap: 19%;
+    justify-content: space-around;
+    gap: 15%;
+    position: relative;
+    z-index: 2;
 }
+
+
+

@@ -1,0 +1,6 @@
+.home{
+    max-width: 921px;
+    height: auto;
+    z-index:5;
+    /* position: static; */
+}

@@ -8,10 +8,21 @@
 /* Header */
 @import url(./blocks/header/header.css); 
 @import url(./blocks/header/__logo/header__logo.css); 
+@import url(./blocks/header/__blur/header__blur.css);
+
+/* Homepage */
+@import url(./blocks/homepage/homepage.css);
+@import url(./blocks/homepage/__Image/homepage__image.css);
+/* Navigate */
+@import url(./blocks/nav/nav.css);
 /* Main */
 
 /* Home */
-
+@import url(./blocks/home/home.css);
+@import url(./blocks/home/__container/home__container.css);
+@import url(./blocks/home/__title/home__title.css);
+@import url(./blocks/home/__subtitle/home__subtitle.css);
+@import url(./blocks/home/__registration/home__registration.css );
 /* AboutUs */
 
 /* Cards */
