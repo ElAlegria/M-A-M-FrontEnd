@@ -1,18 +1,17 @@
-import React from 'react'
+import React from "react";
 
-const Navigate = () => {
+const Navigate = (props) => {
   return (
     <>
-         <div className='Navigate' >
+      <div className="Navigate">
         <button className="button button__text">
-            Home 
+          home
         </button>
-        <button className="button button__text">
-            Home 
-        </button>
-        </div>
+        <button className="button button__text">{props.Info}</button>
+        
+      </div>
     </>
-  )
-}
+  );
+};
 
-export default Navigate
+export default Navigate;

@@ -1,8 +1,8 @@
 .home__title{
-    font-family: Holtwood One SC;
+    font-family: holtwood,sans-serif,serif;
     font-size: 55px;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 900;
     line-height: normal;
     letter-spacing: 3.5px;
 }

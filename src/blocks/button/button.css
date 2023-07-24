@@ -18,5 +18,5 @@
 .button:hover{
     border-top: 7px solid white;
     opacity: .6;
-    /* filter: blur(1px); */
+    filter: blur(1px);
 }

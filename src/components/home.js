@@ -1,6 +1,6 @@
 import React from "react";
 
-const Home = () => {
+const Home = (props) => {
   return (
     <section className="home">
       <div className="home__container">
@@ -9,7 +9,9 @@ const Home = () => {
         <p className="home__registration">
           "Deja que la música te guíe. ¡Regístrate y déjate llevar!"
         </p>
-        <button className="button button__text">Registrate AQUI!!!</button>
+        <button className="button button__text" onClick={props.OpenRegister}>
+          Registrate AQUI!!!
+        </button>
       </div>
     </section>
   );

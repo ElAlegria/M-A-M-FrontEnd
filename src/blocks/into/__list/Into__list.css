@@ -1,0 +1,6 @@
+.Into__list{
+    display: flex;
+    flex-direction: column;
+    list-style-position: inside;
+    gap: 10px;
+}

@@ -1,0 +1,13 @@
+.popup__input {
+  align-items: flex-start;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  display: flex;
+  font-size: 14px;
+  height: 28px;
+  justify-content: flex-start;
+  line-height: 17px;
+  margin-bottom: 3px;
+  padding: 0 0 0 4px;
+  margin-top: 20px;
+}

@@ -23,4 +23,32 @@
   font-display: swap;
   src: url('Inter-Black.woff2?v=3.19') format('woff2'),
     url('Inter-Black.woff?v=3.19') format('woff');
+} 
+
+@font-face{
+  font-family: "alfa";
+  font-style: normal;
+  font-weight: normal;
+  src: url('./AlfaSlabOne-Regular.ttf') format('ttf')
 }
+
+@font-face {
+  font-family: 'holtwood';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./HoltwoodOneSC-Regular.ttf') format('ttf');
+}
+@font-face {
+  font-family: 'inika';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./Inika-Regular.ttf') format('ttf'),
+  url(7);
+}
+@font-face {
+  font-family: 'inika-bold';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./Inika-Bold.ttf') format('ttf');
+}
+

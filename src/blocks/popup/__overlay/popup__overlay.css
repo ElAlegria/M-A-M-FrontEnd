@@ -1,0 +1,9 @@
+.popup__overlay {
+  height: 100%;
+  width: 100%;
+  background: rgb(64 59 111);
+  filter: blur(30px);
+  opacity: .5;
+
+  position: absolute;
+}

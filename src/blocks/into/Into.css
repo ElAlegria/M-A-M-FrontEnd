@@ -1,0 +1,5 @@
+.Into{
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+}
