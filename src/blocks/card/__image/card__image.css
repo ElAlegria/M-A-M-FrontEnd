@@ -1,0 +1,10 @@
+.card__image {
+  width: 100%;
+  height:320px; 
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border: none;
+  outline: unset;
+  object-fit: cover;
+  background-size:contain;
+}

@@ -1,0 +1,7 @@
+.header__header-user{
+    max-width: 250px;
+    min-height: 910px;
+    flex-direction: column;
+    background-color: #000000;
+    grid-area: header;
+}

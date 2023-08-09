@@ -2,7 +2,7 @@ import React from "react";
 
 const Home = (props) => {
   return (
-    <section className="home">
+    <section className="home" id='home'>
       <div className="home__container">
         <h1 className="home__title">“Música para el alma”</h1>
         <h2 className="home__subtitle"> Sumérgete en el universo musical</h2>

@@ -7,7 +7,7 @@ import imageMusicSheet from "../images/music-sheet-gb888083cf_1280.jpg";
 import imageMusician from "../images/musician-g6b5ae3d78_1280.jpg";
 const AboutUs = () => {
   return (
-    <section className="AboutUs">
+    <section className="AboutUs" id="about">
       <Into
         image={imageAudience}
         title={"Alas de la Melodía"}

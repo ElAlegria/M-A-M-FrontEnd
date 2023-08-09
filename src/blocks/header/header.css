@@ -3,10 +3,12 @@
     max-height:135px ;
     background:none ;
     display: flex;
+    position: sticky;
+    top: 0;
     align-items: center;
     justify-content: space-around;
     gap: 15%;
-    position: relative;
+    /* position: relative; */
     z-index: 2;
 }
 

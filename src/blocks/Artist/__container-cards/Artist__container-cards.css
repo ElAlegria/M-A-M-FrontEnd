@@ -1,0 +1,12 @@
+.Artist__cards {
+    width: 100%;
+    height: auto;
+    border: 3px solid rgb(68, 67, 67);
+    /* background-color: rgb(68, 67, 67); */
+    overflow: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}

@@ -1,0 +1,23 @@
+@keyframes onClick {
+  0%{
+    transform: scale(1.8);
+  }
+  40%{
+    transform: scale(1.4);
+
+  }
+  70%{
+    transform: scale(1.8);
+
+  }
+  100%{
+    transform: scale(auto);
+
+  }
+} 
+
+.card__like-button_on {
+  animation: onClick .3s linear forwards;
+  background-image: url('../../../../images/blackheart-icon.svg');
+}
+

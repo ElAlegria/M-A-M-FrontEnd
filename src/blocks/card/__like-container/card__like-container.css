@@ -1,0 +1,7 @@
+.card__like-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 36px;
+}

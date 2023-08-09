@@ -1,6 +1,6 @@
 .popup {
   position: fixed;
-  z-index: 5;
+  z-index: 6;
   background: rgba(0, 0, 0, 0.377);
   top: 0;
   left: 0;

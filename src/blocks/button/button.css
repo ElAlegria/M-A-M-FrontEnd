@@ -11,7 +11,7 @@
     transition: opacity .5s  ease-in ;
     transition: filter .3s  linear ;
     transition: border-top .2s ease-in ;
-    z-index: 3;
+    z-index: 6;
     
 }
 

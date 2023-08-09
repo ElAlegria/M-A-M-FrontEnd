@@ -1,0 +1,31 @@
+@keyframes Pulse {
+  0% {
+    
+    transform: scale(0);
+  }
+  20%{
+    transform: scale(1.5);
+
+  }
+  30% {
+    transform: scale(1);
+
+  }
+  50% {
+    transform: scale(1);
+
+  }
+  75% {
+    transform: scale(1);
+
+  }
+  100% {
+    transform: scale(0);
+
+  }
+}
+
+.card__like_on {
+  display: flex;
+  animation: Pulse 1.7s ease-in-out forwards; /*infinity*/
+}
