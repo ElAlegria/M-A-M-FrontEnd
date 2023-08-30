@@ -1,12 +1,12 @@
-import React from 'react';
-import {useRef} from 'react';
+import React from "react";
+import { useRef } from "react";
 
 const PopupWithForm = ({
   children,
   setErrors,
   name,
   title,
-  onSubmit,
+  onSubmitForm,
   isOpen,
   onClose,
   handleExternalClick,
@@ -15,7 +15,7 @@ const PopupWithForm = ({
 
   const handleInput = (event) => {
     const input = event.target;
-    const errors = {...setErrors};
+    const errors = { ...setErrors };
 
     if (!input.form) {
       return;
@@ -23,7 +23,7 @@ const PopupWithForm = ({
     if (!input.validity.valid) {
       errors[input.name] = input.validationMessage;
     } else {
-      errors[input.name] = '';
+      errors[input.name] = "";
     }
     setErrors(errors);
   };
@@ -38,32 +38,39 @@ const PopupWithForm = ({
 
   return (
     <div
-      className={`popup ${isOpen ? 'popup_opened' : ''}`}
-      onClick={handleExternalClick}>
+      className={`popup ${isOpen ? "popup_opened" : ""}`}
+      onClick={handleExternalClick}
+    >
       <div className="popup__container">
         <button
           type="button"
           className="popup__close-button"
-          onClick={onClose}></button>
+          onClick={onClose}
+        ></button>
         <h3 className="popup__title">{title}</h3>
         <form
           className={`popup_form popupform_type${name}`}
           name={name}
-          onSubmit={onSubmit}
+          onSubmit={onSubmitForm}
           onInput={handleInput}
           ref={formRef}
-          noValidate>
+          noValidate
+        >
           {children}
           <button
             type="submit"
             className={`button button__text popup__button_type_${name} 
-            ${isInvalid() ? 'popup__button_disabled' : ''}`}
-            disabled={isInvalid()}>
-            {name === 'singIn' ? 'Login':'Register'}
+            ${isInvalid() ? "popup__button_disabled" : ""}`}
+            disabled={isInvalid()}
+            onClick={onClose}
+          >
+            {name === "singIn" ? "Login" : "Register"}
           </button>
           <button className="form__link">
-          {name === 'singIn' ? '¿Aún no eres miembro? Regístrate aquí':'¿Ya eres miembro? Inicia sesión aquí'}
-        </button>
+            {name === "singIn"
+              ? "¿Aún no eres miembro? Regístrate aquí"
+              : "¿Ya eres miembro? Inicia sesión aquí"}
+          </button>
         </form>
       </div>
     </div>

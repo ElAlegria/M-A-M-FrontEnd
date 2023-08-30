@@ -1,0 +1,7 @@
+.header__name-user{
+    max-width: 90%;
+    font-size: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    z-index: 3;
+}

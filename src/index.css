@@ -15,7 +15,7 @@
 @import url(./blocks/header/__blur/header__blur.css);
 @import url(./blocks/header/__header-user/header__header-user.css);
 @import url(./blocks/header/__image-user/header__image-user.css);
-
+@import url(./blocks/header/__name-user/header__name-user.css);
 /* Homepage */
 @import url(./blocks/homepage/homepage.css);
 @import url(./blocks/homepage/__Image/homepage__image.css);
