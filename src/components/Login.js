@@ -1,11 +1,17 @@
-import React from "react";
+import React,{useRef}from "react";
 import PopupWithForm from "./PopupWithForm";
 import { useNavigate } from "react-router-dom";
 
 const Login = (props) => {
   const [errors, setErrors] = React.useState({});
   const [formData, setFormData] = React.useState({});
-const navigate = useNavigate()
+  const navigate = useNavigate();
+
+  const formRef = {
+    email:useRef(null),
+    password:useRef(null)
+  }
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -16,10 +22,19 @@ const navigate = useNavigate()
   const onSubmit = (e) => {
     const { email, password } = formData;
     e.preventDefault();
-
-    setFormData({email:'',password:''})
-    navigate('/')
-    props.handleLogin()
+    if (
+      props.LoginPs.some((e) => (
+         e.email === email && e.password === password
+      ))
+    ) {
+      navigate("/");
+      props.handleLogin();
+      setFormData({ email: "", password: "" });
+      formRef.email.current.value = ""
+      formRef.password.current.value = ""
+      return;
+    }
+    navigate("/homepage");
   };
 
   return (
@@ -38,6 +53,7 @@ const navigate = useNavigate()
           className="form__input"
           placeholder="Correo electrónico"
           name="email"
+          ref={formRef.email}
           required
           onChange={handleChange}
         />
@@ -48,6 +64,7 @@ const navigate = useNavigate()
           className="form__input"
           placeholder="Contraseña"
           name="password"
+          ref={formRef.password}
           required
           onChange={handleChange}
         />

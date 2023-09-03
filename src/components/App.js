@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import { Route, Routes } from "react-router-dom";
 import ProtectedRoute from "./ProtectRouter";
 import Header from "./Header";
@@ -7,13 +6,15 @@ import Navigate from "./Nav";
 import Homepage from "./Homepage";
 import Home from "./home";
 import AboutUs from "./about";
-import Artist from "./Artist";
+import Main from "./main";
 import Footer from "./Footer";
 import Popup from "./Popup";
 import Login from "./Login";
 import Register from "./Register";
 import { CurrentUserContext } from "../Contexts/CurrentUserContext";
 
+//!export JSON Remove finish project
+import { pruebas, LoginUserP } from "./PrubasJSON/ObjectJSON";
 function App() {
   //?state
   const [openLogin, setOpenLogin] = useState(false);
@@ -21,64 +22,26 @@ function App() {
   //?Login User
   const [userLogin, setUserLogin] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
-  const [card, setCard] = React.useState([]);
-  const [myList, setMyList] = useState(true);
-  const [myArtistFav, setMyArtistFav] = useState([]);
+  const [myList, setMyList] = useState(false);
+  const [card, setCard] = useState([]);
+  const [LoginPs, setLoginPs] = useState([]);
   //?state
   //?context
   const [CurrentUser, setCurrentUser] = useState({});
   //!function
 
   //! prueba cards borrad
-  const pruebas = `[
-  {
-    "name": "Cristianasdaasdsaasdsadddadaadssdsadasdsdsdsdasdaaddddasd",
-    "link": "https://play-lh.googleusercontent.com/3jUZYh2Y5G8Lhn5sFLTblX7auESA8TOenluzRYhf8nVmveFly8WqLxC0Id1gU-SJisQ",
-    "_id": "1234567890123456789012",
-    "likes":false
-  },  {
-    "name": "Cristianasdaasdsaasdsadddadaadssdsadasdsdsdsdasdaaddddasd",
-    "link": "https://media.vandalsports.com/i/640x360/12-2021/202112912734_1.jpg",
-    "_id": "12345678901234567890",
-    "likes":false
-  }
-]
-`;
-  const MyArtistFav = `[
-  {
-    "name":"julio",
-    "link":"https://XD.com",
-    "_id": "345",
-    "Likes":"true"
-  },
-  {
-    "name":"mayra",
-    "link":"https://XD.com",
-    "_id": "213",
-    "Likes":"true"
-  }
-]`;
 
-  const handleUser = (data) => {
-    //llamar api desde aqui y guardar todo en el current
 
-    setCurrentUser({
-      ...CurrentUser,
-      name: data.data.name,
-      avatar: data.data.avatar,
-    });
-  };
-  const handleLike = (card) => {
-    setCard((state) => state.map((c) => (c._id === card._id ? "" : c)));
-  };
+
   const handleOpenLogin = () => {
     setOpenLogin(true);
   };
 
-  const handleLogin =() =>{
-    setLoggedIn(true)
-    setUserLogin(true)
-  }
+  const handleLogin = () => {
+    setLoggedIn(true);
+    setUserLogin(true);
+  };
   const handleMyList = () => [setMyList(true)];
   const handleOpenRegister = () => {
     setOpenRegister(true);
@@ -95,12 +58,13 @@ function App() {
   };
 
   React.useEffect(() => {
-    const ArtistFav = JSON.parse(MyArtistFav);
-    setMyArtistFav(ArtistFav);
+
     const cards = JSON.parse(pruebas);
     setCard(cards);
+    const LoginP1 = JSON.parse(LoginUserP);
+    setLoginPs(LoginP1);
   }, []);
-  React.useEffect(() => {}, []);
+
   //!function
   return (
     <>
@@ -126,12 +90,11 @@ function App() {
               <Route
                 path="/"
                 element={
-                  <Artist
+                  <Main
                     cards={card}
-                    MyArtistFav={myArtistFav}
-                    onCardLike={handleLike}
+                    // onCardLike={handleLike}
                     myList={myList}
-                  ></Artist>
+                  ></Main>
                 }
               />
             </Route>
@@ -151,13 +114,20 @@ function App() {
 
           <Footer footerUser={userLogin} />
           <Popup isOpen={openLogin}>
-            <Login isOpen={openLogin} onClose={Close} handleLogin={handleLogin}></Login>
+            <Login
+              isOpen={openLogin}
+              onClose={Close}
+              handleLogin={handleLogin}
+              LoginPs={LoginPs}
+            ></Login>
           </Popup>
           <Popup isOpen={openRegister}>
             <Register
               isOpen={true}
               onClose={Close}
               CurrentUser={setCurrentUser}
+              LoginUser={LoginPs}
+              isOpenLogin={handleOpenLogin}
             ></Register>
           </Popup>
         </div>
@@ -168,8 +138,4 @@ function App() {
 
 export default App;
 
-// props.setLoggedIn(true)
-// props.setUserLogin(true)
-// navigate('/')
-// setLoggedIn={setLoggedIn}
-// setUserLogin={setUserLogin}
+

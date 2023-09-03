@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import PopupWithForm from "./PopupWithForm";
-import { useNavigate } from "react-router-dom";
 
 const Register = (props) => {
-  const [errors, setErrors] = React.useState({});
-  const [formData, setFormData] = React.useState({});
-
-  const navigate  = useNavigate()
+  const [errors, setErrors] = useState({});
+  const [formData, setFormData] = useState({});
+  const formRef = {
+    name: useRef(null),
+    email: useRef(null),
+    password: useRef(null),
+    avatar: useRef(null),
+  };
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -17,9 +20,26 @@ const Register = (props) => {
   const onSubmit = (e) => {
     const { name, email, password, avatar } = formData;
     e.preventDefault();
-    props.CurrentUser({name:name,avatar:avatar})
+
+    if (
+      props.LoginUser.some((user) => (
+         user.email === email
+      ))
+    ) {
+      return console.log('Usuario ya existe')
+
+    }
+    props.LoginUser.push({
+      name: name,
+      email: email,
+      password: password,
+      avatar: avatar,
+    });
+    props.CurrentUser({ name: name, avatar: avatar });
+    props.isOpenLogin(true);
     setFormData({ name: "", email: "", password: "", avatar: "" });
- 
+
+    
   };
 
   return (
@@ -38,6 +58,7 @@ const Register = (props) => {
           className="form__input"
           placeholder="My Name"
           name="name"
+          ref={formRef.name}
           required
           onChange={handleChange}
         />
@@ -48,6 +69,7 @@ const Register = (props) => {
           className="form__input"
           placeholder="Correo electrónico"
           name="email"
+          ref={formRef.email}
           required
           onChange={handleChange}
         />
@@ -58,6 +80,7 @@ const Register = (props) => {
           className="form__input"
           placeholder="Contraseña"
           name="password"
+          ref={formRef.password}
           required
           onChange={handleChange}
         />
@@ -71,6 +94,7 @@ const Register = (props) => {
           className="form__input"
           placeholder="My Avatar"
           name="avatar"
+          ref={formRef.avatar}
           required
           onChange={handleChange}
         />

@@ -10,6 +10,8 @@ const PopupWithForm = ({
   isOpen,
   onClose,
   handleExternalClick,
+  // isOpenLogin,
+
 }) => {
   const formRef = useRef(null);
 
@@ -66,11 +68,11 @@ const PopupWithForm = ({
           >
             {name === "singIn" ? "Login" : "Register"}
           </button>
-          <button className="form__link">
+          {/* <button className="form__link" onClick={name === "singIn" ?  isOpenLogin(false): ""}>
             {name === "singIn"
               ? "¿Aún no eres miembro? Regístrate aquí"
               : "¿Ya eres miembro? Inicia sesión aquí"}
-          </button>
+          </button> */}
         </form>
       </div>
     </div>

@@ -1,12 +1,18 @@
-import React, { useContext } from "react";
-// import { CurrentUserContext } from "../Context/CurrentUserContext";
+import React from "react";
 
 const Card = ({ card }) => {
-  const [isLike, setIsLike] = React.useState(false);
+  const [isLike, setIsLike] = React.useState(undefined);
 
   const handleLikeClick = () => {
     setIsLike(!isLike);
+
+
   };
+
+  React.useEffect(()=>{
+    card.likes = isLike
+
+  })
   return (
     <>
       <li key={card._id} className="card">
