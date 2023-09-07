@@ -16,7 +16,7 @@ Este es un emocionante proyecto de música desarrollado utilizando tecnologías 
 ![Página de Inicio](./src/images/imagen-inicio.png)
 ![Registrate](./src/images/Registrate.png)
 ![Explorar Música](./src/images/Busqueda-music.png)
-![Crea tu propia lista personalizada](./src/images/My)
+![Crea tu propia lista personalizada](./src/images/myList.png)
 
 ## Características Clave
 - Explora una amplia biblioteca de canciones y álbumes.
