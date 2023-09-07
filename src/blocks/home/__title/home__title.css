@@ -1,8 +1,20 @@
-.home__title{
-    font-family: holtwood,sans-serif,serif;
-    font-size: 55px;
-    font-style: normal;
-    font-weight: 900;
-    line-height: normal;
-    letter-spacing: 3.5px;
+.home__title {
+  font-family: holtwood, sans-serif, serif;
+  font-size: 55px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: normal;
+  letter-spacing: 3.5px;
+  text-align: center;
+}
+
+@media screen and (max-width: 800px) {
+  .home__title {
+    font-size: 44px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .home__title {
+    font-size: 44px;
+  }
 }

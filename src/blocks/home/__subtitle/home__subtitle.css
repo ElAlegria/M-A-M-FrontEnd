@@ -4,4 +4,12 @@
     font-weight: 400;
     line-height: normal;
     letter-spacing: 2.08;
+    text-align: center;
+
+}
+
+@media screen and (max-width:600px) {
+ .home__subtitle{
+    font-size: 25px;
+ }
 }

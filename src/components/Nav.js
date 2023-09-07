@@ -36,7 +36,7 @@ const Navigate = (props) => {
         )}
         {useMatch("/") && (
           <>
-            <button className="button button__text" onClick={home}>home</button>
+            <button className="button button__text" onClick={home}>Artist</button>
             <button className="button button__text" onClick={myList}>My list</button>
           </>
         )}

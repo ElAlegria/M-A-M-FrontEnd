@@ -7,3 +7,17 @@
     color: rgba(113, 125, 171, 1);
     z-index: 5;
 }
+
+
+@media screen and (max-width:800px) {
+    .Footer__copyright{
+        text-align: center;
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:460px) {
+    .Footer__copyright{
+        font-size: 13px;
+    }
+}

@@ -7,3 +7,19 @@
   line-height:initial;
   letter-spacing: 2.34px;
 }
+
+@media screen and (max-width:1200px) {
+ .Into__text{
+  font-size: 28px;
+ } 
+}
+@media screen and (max-width:1000px) {
+ .Into__text{
+  font-size: 24px;
+ } 
+}
+@media screen and (max-width:580px) {
+ .Into__text{
+  font-size: 20px;
+ } 
+}

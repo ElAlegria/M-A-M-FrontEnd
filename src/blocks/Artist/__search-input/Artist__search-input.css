@@ -1,0 +1,14 @@
+.Artist__search-input{
+    flex: 1; 
+    border: none;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 15px;
+    outline: none; 
+}
+
+@media screen and (max-width:520px) {
+    .Artist__search-input{
+        max-width: 233px;
+    }
+}

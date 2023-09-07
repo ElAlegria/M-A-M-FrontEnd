@@ -6,3 +6,20 @@
   font-weight: 400;
   line-height: normal;
 }
+
+
+@media screen and (max-width:1200px) {
+  .Into__title{
+    font-size: 58px;
+  }
+}
+@media screen and (max-width:1100px) {
+  .Into__title{
+    font-size: 48px;
+  }
+}
+@media screen and (max-width: 580px) {
+  .Into__title{
+    font-size: 38px;
+  }
+}

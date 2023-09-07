@@ -1,26 +1,10 @@
-const pruebas = `[
-    {
-      "name": "Cristianasdaasdsaasdsadddadaadssdsadasdsdsdsdasdaaddddasd",
-      "link": "https://play-lh.googleusercontent.com/3jUZYh2Y5G8Lhn5sFLTblX7auESA8TOenluzRYhf8nVmveFly8WqLxC0Id1gU-SJisQ",
-      "_id": "1234567890123456789012",
-      "likes":false
-    },  {
-      "name": "Cristianasdaasdsaasdsadddadaadssdsadasdsdsdsdasdaaddddasd",
-      "link": "https://media.vandalsports.com/i/640x360/12-2021/202112912734_1.jpg",
-      "_id": "12345678901234567890",
-      "likes":false
-
-    },
-    {
-      "name": "pruebasMyArtist",
-      "link": "https://media.vandalsports.com/i/640x360/12-2021/202112912734_1.jpg",
-      "_id": "123456789012345678901",
-      "likes":false
-    }
+const cards = `[
   ]
   `;
-
-
+const myListCard = `[
+    
+  ]
+  `;
 const LoginUserP = `[
   {
     "name":"julio",
@@ -43,6 +27,4 @@ const LoginUserP = `[
   }
 ]`;
 
-export { pruebas, LoginUserP };
-
-
+export { cards, myListCard, LoginUserP };

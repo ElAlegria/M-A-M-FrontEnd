@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Route, Routes } from "react-router-dom";
+import {  Route, Routes,  } from "react-router-dom";
 import ProtectedRoute from "./ProtectRouter";
 import Header from "./Header";
 import Navigate from "./Nav";
@@ -12,9 +12,9 @@ import Popup from "./Popup";
 import Login from "./Login";
 import Register from "./Register";
 import { CurrentUserContext } from "../Contexts/CurrentUserContext";
-
+import api from "../utils/api";
 //!export JSON Remove finish project
-import { pruebas, LoginUserP } from "./PrubasJSON/ObjectJSON";
+import { LoginUserP, cards, myListCard } from "./PrubasJSON/ObjectJSON";
 function App() {
   //?state
   const [openLogin, setOpenLogin] = useState(false);
@@ -23,57 +23,105 @@ function App() {
   const [userLogin, setUserLogin] = useState(false);
   const [loggedIn, setLoggedIn] = useState(false);
   const [myList, setMyList] = useState(false);
+  const [isClicked, setIsClicked] = useState(false);
   const [card, setCard] = useState([]);
+  const [myCard, setMyCard] = useState([]);
+
   const [LoginPs, setLoginPs] = useState([]);
   //?state
   //?context
   const [CurrentUser, setCurrentUser] = useState({});
   //!function
+  const [searchText, setSearchText] = React.useState();
 
   //! prueba cards borrad
 
-
-
+  const handleClick = () => {
+    setIsClicked(!isClicked);
+  };
   const handleOpenLogin = () => {
     setOpenLogin(true);
+    setIsClicked(false);
   };
-
+  const handleOnSearch = (search) => {
+    setSearchText(search);
+  };
   const handleLogin = () => {
     setLoggedIn(true);
     setUserLogin(true);
   };
-  const handleMyList = () => [setMyList(true)];
+  const handleMyList = () => {
+    setMyList(true);
+    setIsClicked(false);
+  };
   const handleOpenRegister = () => {
     setOpenRegister(true);
+    setIsClicked(false);
   };
 
   const handleCloseSectionUser = () => {
     setUserLogin(false);
     setLoggedIn(false);
+    setIsClicked(false);
   };
   const Close = () => {
     setOpenLogin(false);
     setOpenRegister(false);
     setMyList(false);
+    setIsClicked(false);
   };
 
   React.useEffect(() => {
-
-    const cards = JSON.parse(pruebas);
-    setCard(cards);
     const LoginP1 = JSON.parse(LoginUserP);
     setLoginPs(LoginP1);
   }, []);
 
+  React.useEffect(() => {
+    api.ArtistInfoTryParty(searchText || "maluma").then((artist) => {
+      const CardsP = JSON.parse(cards);
+      artist.data.map((card) => {
+        return CardsP.push({
+          id: card.id,
+          title: card.title,
+          image: card.album.cover_big,
+          like: false,
+        });
+      });
+
+      setCard(CardsP);
+    });
+  }, [searchText]);
+
+  React.useEffect(() => {
+    const myLisT = JSON.parse(myListCard);
+    card
+      .filter((obj) => obj.like === true)
+      .map((card) => {
+        myLisT.push({
+          id: card.id,
+          title: card.title,
+          image: card.image,
+          like: card.like,
+        });
+      });
+    setMyCard(myLisT);
+  }, [myList]);
   //!function
   return (
     <>
       <CurrentUserContext.Provider value={CurrentUser}>
         <div className={`App ${userLogin && loggedIn ? "App__user" : ""}`}>
+          <button
+            className={`custom-button ${isClicked ? "clicked " : ""}`}
+            onClick={handleClick}
+          >
+            <span></span>
+          </button>
           <Header
             OpenLogin={handleOpenLogin}
             userLogin={userLogin}
             CloseSection={handleCloseSectionUser}
+            handleClick={isClicked}
           >
             <Navigate
               userLogin={userLogin}
@@ -92,8 +140,10 @@ function App() {
                 element={
                   <Main
                     cards={card}
-                    // onCardLike={handleLike}
+                    handleOnSearch={handleOnSearch}
                     myList={myList}
+                    MyFavCards={myCard}
+                    setMyCard={setMyCard}
                   ></Main>
                 }
               />
@@ -137,5 +187,3 @@ function App() {
 }
 
 export default App;
-
-

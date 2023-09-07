@@ -1,4 +1,4 @@
-import React, { useEffect} from "react";
+import React, { useEffect } from "react";
 import logo from "../images/Logo pagina.png";
 import { useMatch } from "react-router-dom";
 import { CurrentUserContext } from "../Contexts/CurrentUserContext";
@@ -9,6 +9,7 @@ const Header = (props) => {
     <>
       <header
         className={`header ${props.userLogin ? "header__header-user" : ""}`}
+        id={`${props.handleClick ? "header__on" : ""}`}
       >
         <img className="header__logo" alt="Logo Music and Music" src={logo} />
         {props.userLogin ? (

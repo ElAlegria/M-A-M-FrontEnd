@@ -20,3 +20,21 @@
     opacity: .6;
     filter: blur(1px);
 }
+
+@media screen and (max-width:1000px) {
+    .button{
+       width: 186px;
+       height: 33px; 
+    }
+}
+@media screen and (max-width:700px) {
+    .button{
+       width: 138px;
+    }
+}
+@media screen and (max-width:600px) {
+    .button{
+       width: 170px;
+       /* height: 33px;  */
+    }
+}

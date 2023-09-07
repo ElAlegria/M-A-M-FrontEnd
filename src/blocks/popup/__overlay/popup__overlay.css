@@ -3,7 +3,9 @@
   width: 100%;
   background: rgb(64 59 111);
   filter: blur(30px);
-  opacity: .5;
+  opacity: 0.5;
 
   position: absolute;
 }
+
+

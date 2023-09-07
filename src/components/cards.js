@@ -1,29 +1,24 @@
 import React from "react";
 
 const Card = ({ card }) => {
-  const [isLike, setIsLike] = React.useState(undefined);
+  const [isLike, setIsLike] = React.useState(true);
 
   const handleLikeClick = () => {
     setIsLike(!isLike);
-
-
+    card.like = isLike;
   };
 
-  React.useEffect(()=>{
-    card.likes = isLike
-
-  })
   return (
     <>
-      <li key={card._id} className="card">
-        <img src={card.link} alt={card.name} className="card__image" />
+      <li key={card.id} className="card">
+        <img src={card.image} alt={card.title} className="card__image" />
         <div className="card__information">
-          <h2 className="card__title">{card.name}</h2>
+          <h2 className="card__title">{card.title}</h2>
           <div className="card__like-container">
             <button
               type="button"
               className={`card__like-button ${
-                isLike ? "card__like-button_on" : ""
+                card.like ? "card__like-button_on" : ""
               }`}
               onClick={handleLikeClick}
             ></button>
@@ -36,4 +31,4 @@ const Card = ({ card }) => {
 
 export default Card;
 
-// , onCardClick, like, onCardLike, onDeleteCard    
+// , onCardClick, like, onCardLike, onDeleteCard

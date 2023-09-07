@@ -1,0 +1,17 @@
+.Artist__search-container{
+    /* min-width: 240px; */
+    display: flex;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: space-between;
+    align-self: flex-end;
+    background-color: #f2f2f2; 
+    padding: 5px;
+    margin: 0 40px 0 0;
+}
+
+@media screen and (max-width:520px) {
+    .Artist__search-container{
+        width: 340px;
+    }
+}

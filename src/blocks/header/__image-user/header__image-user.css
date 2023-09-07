@@ -8,3 +8,13 @@
   text-align: center;
   z-index: 5;
 }
+
+@media screen and (max-width:680px) {
+  .header__image-user{
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    /* position: absolute; */
+  }
+}

@@ -1,9 +1,20 @@
 .homepage__image{
     width: 100%;
-    max-height: 997px;
+    height :100%;
     position: absolute;
     top: 0;
     left: 0;
-    filter: contrast(1.2) blur(4px);
-    z-index: 0;
+    filter: contrast(1) blur(4px);
+    
 }
+
+@media screen and (max-width:800px) {
+    .homepage__image{
+        height: 75%;
+    }
+}
+/* @media screen and (max-width:600px) {
+    .homepage__image{
+        height: %;
+    }
+} */
