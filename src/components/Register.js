@@ -51,7 +51,6 @@ const Register = (props) => {
       onClose={props.onClose}
       handleExternalClick={props.handleExternalClick}
       setErrors={setErrors}
-      handleClose={props.handleClose}
     >
       <label className="form__label">
         <input
@@ -100,7 +99,6 @@ const Register = (props) => {
           onChange={handleChange}
         />
       </label>
-      
     </PopupWithForm>
   );
 };
