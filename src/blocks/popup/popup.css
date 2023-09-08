@@ -2,11 +2,10 @@
   height: 100%;
   width: 100%;
   position: fixed;
-  z-index: 6;
+  z-index: 2;
   background: rgba(0, 0, 0, 0.377);
   top: 0;
   left: 0;
-
   display: none;
   justify-content: center;
   align-items: center;

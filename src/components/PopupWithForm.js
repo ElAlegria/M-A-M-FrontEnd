@@ -7,11 +7,8 @@ const PopupWithForm = ({
   name,
   title,
   onSubmitForm,
-  isOpen,
   onClose,
-  handleExternalClick,
-  // isOpenLogin,
-
+  handleClose,
 }) => {
   const formRef = useRef(null);
 
@@ -39,10 +36,7 @@ const PopupWithForm = ({
   };
 
   return (
-    <div
-      className={`popup ${isOpen ? "popup_opened" : ""}`}
-      onClick={handleExternalClick}
-    >
+    <>
       <div className="popup__container">
         <button
           type="button"
@@ -75,7 +69,8 @@ const PopupWithForm = ({
           </button> */}
         </form>
       </div>
-    </div>
+      <div className="popup__overlay" onClick={handleClose}></div>
+    </>
   );
 };
 // ¿Ya eres miembro? Inicia sesión aquí

@@ -1,4 +1,4 @@
-import React,{useRef}from "react";
+import React, { useRef } from "react";
 import PopupWithForm from "./PopupWithForm";
 import { useNavigate } from "react-router-dom";
 
@@ -8,9 +8,9 @@ const Login = (props) => {
   const navigate = useNavigate();
 
   const formRef = {
-    email:useRef(null),
-    password:useRef(null)
-  }
+    email: useRef(null),
+    password: useRef(null),
+  };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,15 +23,14 @@ const Login = (props) => {
     const { email, password } = formData;
     e.preventDefault();
     if (
-      props.LoginPs.some((e) => (
-         e.email === email && e.password === password
-      ))
+      props.LoginPs.some((e) => e.email === email && e.password === password)
     ) {
       navigate("/");
       props.handleLogin();
       setFormData({ email: "", password: "" });
-      formRef.email.current.value = ""
-      formRef.password.current.value = ""
+      formRef.email.current.value = "";
+      formRef.password.current.value = "";
+
       return;
     }
     navigate("/homepage");
@@ -46,6 +45,7 @@ const Login = (props) => {
       onClose={props.onClose}
       handleExternalClick={props.handleExternalClick}
       setErrors={setErrors}
+      handleClose={props.handleClose}
     >
       <label className="form__label">
         <input
