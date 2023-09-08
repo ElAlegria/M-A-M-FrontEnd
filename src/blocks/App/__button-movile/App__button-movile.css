@@ -1,0 +1,59 @@
+/* Estilo para el estado normal del botón */
+.custom-button {
+    width: 40px;
+    height: 50px;
+    display: none;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: sticky;
+    top: 1%;
+    left: 1%;
+    z-index: 7;
+  }
+  
+  /* Líneas verticales en el estado normal */
+  .custom-button::before,
+  .custom-button::after,
+  .custom-button span {
+    content: "";
+    position: absolute;
+    background-color: #ffffff;
+    border: .1px #000000 solid;
+    width: 30px;
+    height: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .custom-button::before {
+    top: 10px;
+    align-self: center;
+    /* transform: rotateX(30deg); */
+  }
+  
+  .custom-button span {
+    top: 50%;
+  }
+  
+  .custom-button::after {
+    bottom: 10px;
+  }
+  
+  .custom-button.clicked::before {
+    transform: rotateZ(60deg);
+  }
+
+  
+  .custom-button.clicked::after {
+    transform: rotateZ(-60deg);
+  }
+  
+
+  @media screen and (max-width:680px) {
+    .custom-button{
+      display: flex;
+    }
+  }
+ 

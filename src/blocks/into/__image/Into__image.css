@@ -1,0 +1,24 @@
+.Into__image {
+  max-width: 614px;
+  height: 602px;
+  border-radius: 330px;
+}
+
+@media screen and (max-width: 1415px) {
+  .Into__image {
+    max-width: 414px;
+    max-height: 402px
+  }
+}
+@media screen and (max-width: 680px) {
+  .Into__image {
+    max-width: 314px;
+    max-height: 302px
+  }
+}
+@media screen and (max-width: 500px) {
+  .Into__image {
+    max-width: 214px;
+    max-height: 202px
+  }
+}

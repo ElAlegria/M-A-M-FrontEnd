@@ -1,0 +1,15 @@
+.Artist__title {
+  max-height: auto;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  font-style:italic;
+  margin: 30px 0 0;
+}
+
+
+@media screen and (max-width:680px) {
+  .Artist__title{
+    text-align: center;
+  }
+}

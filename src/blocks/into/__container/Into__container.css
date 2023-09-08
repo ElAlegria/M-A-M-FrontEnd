@@ -1,0 +1,17 @@
+.Into__container{
+    min-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+@media screen and (max-width:900px) {
+    .Into__container{
+        min-width: 300px;
+    }
+}
+@media screen and (max-width:780px) {
+    .Into__container{
+        min-width: 100px;
+    }
+}

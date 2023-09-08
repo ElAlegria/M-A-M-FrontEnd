@@ -1,0 +1,20 @@
+.header__image-user {
+  width: 200px;
+  height: 190px;
+  background: #D9D9D9;
+    background-size: cover;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 330px;
+  text-align: center;
+  z-index: 5;
+}
+
+@media screen and (max-width:680px) {
+  .header__image-user{
+    width: 100px;
+    height: 100px;
+    margin: 0;
+    padding: 0;
+    /* position: absolute; */
+  }
+}

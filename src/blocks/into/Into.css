@@ -1,0 +1,12 @@
+.Into{
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+}
+
+@media screen and (max-width:1000px) {
+    .Into{
+        justify-content: center;
+        align-items: center;
+    }
+}
