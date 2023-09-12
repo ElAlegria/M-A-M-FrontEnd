@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import logo from "../images/Logo pagina.png";
+import logo from "../images/Logo_pagina.png";
 import { useMatch } from "react-router-dom";
 import { CurrentUserContext } from "../Contexts/CurrentUserContext";
 const Header = (props) => {

@@ -1,5 +1,5 @@
 import React from "react";
-import logoMAM from "../images/Logo footer.png";
+import logoMAM from "../images/Logo_footer.png";
 const Footer = (props) => {
   return (
     <>

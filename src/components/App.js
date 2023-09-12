@@ -10,7 +10,7 @@ import Main from "./main";
 import Footer from "./Footer";
 import Popup from "./Popup";
 import Login from "./Login";
-import Register from "./Register";
+import Register from "./register";
 import { CurrentUserContext } from "../Contexts/CurrentUserContext";
 import api from "../utils/api";
 //!export JSON Remove finish project
