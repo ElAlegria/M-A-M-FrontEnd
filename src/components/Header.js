@@ -35,7 +35,7 @@ const Header = (props) => {
             Cerrar Seccion
           </button>
         )}
-
+        <div></div>
         <div className="header__blur"></div>
       </header>
     </>
