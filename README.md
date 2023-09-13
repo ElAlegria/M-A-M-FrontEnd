@@ -1,6 +1,6 @@
 # Proyecto de Música Similar a Spotify
 
-![Logo del Proyecto](./src/images/Logo%20pagina.png)
+![Logo del Proyecto](./src/images/Logo_pagina.png)
 
 ## Descripción del Proyecto
 Este es un emocionante proyecto de música desarrollado utilizando tecnologías modernas. Nuestra plataforma te permite explorar y disfrutar de la música de una manera única.
