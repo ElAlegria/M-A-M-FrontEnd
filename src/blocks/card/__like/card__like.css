@@ -1,0 +1,25 @@
+.card__like{
+    width: 100%;
+    position: absolute;
+    display: none;
+
+    z-index: 3;
+    top: 20%;
+    left: 20%;
+}
+
+@media screen and (max-width:539px) {
+    .card__like{
+        left: 33%;
+    }
+} 
+@media screen and (max-width:400px) {
+    .card__like{
+        left: 27%;
+    }
+} 
+@media screen and (max-width:350px) {
+    .card__like{
+        left: 20%;
+    }
+} 

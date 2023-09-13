@@ -1,0 +1,11 @@
+.App__user{
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: 
+    'header ArtistContainer'
+    'header ArtistContainer'
+    'Footer Footer'
+    ;
+    overflow:none;
+}

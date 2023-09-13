@@ -1,0 +1,19 @@
+.form__label {
+  display: flex;
+  background: transparent;
+  flex-direction: column;
+  margin-top: 29px;
+  width: 100%;
+  border-bottom: 2px solid #cccccc;
+  border-radius: 30px;
+  transform: scale(1);
+  transition: transform 0.3s ease-in;
+}
+
+.form__label:hover {
+  transform: scale(1.1);
+}
+
+.form__label:last-of-type {
+  margin-bottom: 35px;
+}

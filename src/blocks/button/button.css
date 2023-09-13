@@ -1,0 +1,40 @@
+.button{
+    width: 226px;
+    height: 43px;
+    flex-shrink: 0;
+    border-radius: 50px;
+    border-top: none;
+    border-bottom: 1px solid white;
+    border-right: 1px solid white;
+    border-left: 1px solid white;
+    background:none;
+    transition: opacity .5s  ease-in ;
+    transition: filter .3s  linear ;
+    transition: border-top .2s ease-in ;
+    z-index: 6;
+    
+}
+
+.button:hover{
+    border-top: 7px solid white;
+    opacity: .6;
+    filter: blur(1px);
+}
+
+@media screen and (max-width:1000px) {
+    .button{
+       width: 186px;
+       height: 33px; 
+    }
+}
+@media screen and (max-width:700px) {
+    .button{
+       width: 138px;
+    }
+}
+@media screen and (max-width:600px) {
+    .button{
+       width: 170px;
+       /* height: 33px;  */
+    }
+}

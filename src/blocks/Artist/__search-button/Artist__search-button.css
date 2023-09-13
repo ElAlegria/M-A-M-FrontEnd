@@ -1,0 +1,17 @@
+.Artist__search-button {
+  min-width: 40px;
+  min-height: 40px;
+  /* background-color: black; */
+  /* color: white; */
+  border: 1px solid black;
+  background-image: url("../../../images/Button-search.png");
+  border-radius: 25px;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-repeat: no-repeat;
+  background-size:contain;
+  background-clip: border-box;
+}
